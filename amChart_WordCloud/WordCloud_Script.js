@@ -12,9 +12,9 @@
     // Retrieve & configure the Header Space element below the Record Detail view's header
     let headerSpace = kintone.app.record.getHeaderMenuSpaceElement();
     headerSpace.style.height = '500px';
-    headerSpace.style.width = '700px';
-    // headerSpace.style.marginLeft = '25px';
-    // headerSpace.style.marginRight = '25px';
+    // headerSpace.style.width = '700px';
+    headerSpace.style.marginLeft = '25px';
+    headerSpace.style.marginRight = '25px';
     headerSpace.style.border = 'solid';
     headerSpace.style.borderColor = '#ED7B84';
 
