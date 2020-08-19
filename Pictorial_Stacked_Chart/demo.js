@@ -38,12 +38,15 @@ am4core.ready(function () {
   }];
 
   var series = chart.series.push(new am4charts.PictorialStackedSeries());
+
   series.dataFields.value = "value";
   series.dataFields.category = "name";
+
   series.alignLabels = true;
 
   // Set the SVG data (from K_SVG.js)
-  series.maskSprite.path = svgHuman;
+  series.maskSprite.path = svgBottle;
+
   series.ticks.template.locationX = 1;
   series.ticks.template.locationY = 0.5;
 
