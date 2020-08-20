@@ -98,16 +98,11 @@ https://www.ars.usda.gov/ARSUserFiles/80400530/pdf/DBrief/21_Beverage_choices_ad
 | Diet beverages      | 16   | 14     |
 
 
-##
+## Nutella Unmasked
 
-Ingredieent, Percentage, Per 400 grams
-Hazelnuts, 13%, 52g
-Cocoa Powder, 7.4%, 29.6g
-Vanillin, 0.02%, 0.08 g
-Sugar, 55%, 216 g
-Skim milk powder,
-Vegetable Oil,
-Soy Lecithin (emulsifier),
-
-We operate a high-precision, automatized dosing system. A 400g Nutella® glass contains only 
-0.08g of vanillin: a very little amount compared to the total weight, but enough to heighten and stabilize the flavour and fragrance of Nutella®. Its unique aroma complements the flavours of the other ingredients in the formula and adds the finishing touch to the recipe, guaranteeing Nutella®'s original taste.
+Ingredient, Percentage
+Soy Lecithin & Vanillin, .5%
+Cocoa Powder & Skim milk powder, 8.5%
+Hazelnuts, 13%
+Palm Oil, 23%
+Sugar, 55%
