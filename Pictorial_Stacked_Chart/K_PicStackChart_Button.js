@@ -67,10 +67,11 @@
       return;
     }
     // Set a button
-    var myIndexButton = document.createElement('button');
-    myIndexButton.id = "changeButton";
-    myIndexButton.innerText = "Change Graphic";
-    myIndexButton.onclick = buttonAction;
+    var svgButton = document.createElement('button');
+    svgButton.id = "changeButton";
+    svgButton.innerText = "Change Graphic";
+    svgButton.onclick = buttonAction;
+    svgButton.style = "display:inline-block;box-sizing:border-box;padding:0 16px;min-width:163px;height:48px;outline:none;border:1px solid #e3e7e8;background-color:#f7f9fa;box-shadow:1px 1px 1px #fff inset;color:#3498db;text-align:center;line-height:48px;font-weight: bold;";
 
     var pointer = 1;
     var svgArray = [svgHuman, svgBottle, svgCan, svgApple];
@@ -84,7 +85,7 @@
     }
 
     // Get the header menu space element and set the button there
-    kintone.app.getHeaderMenuSpaceElement().appendChild(myIndexButton);
+    kintone.app.getHeaderMenuSpaceElement().appendChild(svgButton);
 
     charting(svgHuman);
   }); // end am4core.ready()
