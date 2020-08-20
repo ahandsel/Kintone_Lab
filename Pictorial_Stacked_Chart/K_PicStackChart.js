@@ -36,7 +36,7 @@
     series.alignLabels = true;
 
     // Set the SVG data (from K_SVG.js)
-    series.maskSprite.path = svgCan;
+    series.maskSprite.path = svgJam;
 
     // Ticks connect slice to its label
     series.ticks.template.locationX = 1;

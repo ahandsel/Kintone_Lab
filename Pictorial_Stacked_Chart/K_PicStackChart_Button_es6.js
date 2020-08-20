@@ -73,7 +73,7 @@
     svgButton.style = 'display:inline-block;box-sizing:border-box;padding:0 16px;min-width:163px;height:48px;outline:none;border:1px solid #e3e7e8;background-color:#f7f9fa;box-shadow:1px 1px 1px #fff inset;color:#3498db;text-align:center;line-height:48px;font-weight: bold;';
 
     let pointer = 1;
-    const svgArray = [svgHuman, svgBottle, svgCan, svgApple];
+    const svgArray = [svgHuman, svgBottle, svgCan, svgApple, svgJam];
 
     function buttonAction() {
       if (pointer >= svgArray.length) {

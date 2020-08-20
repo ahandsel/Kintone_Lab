@@ -12,8 +12,10 @@
       spaceDiv.style.border = 'solid';
       spaceDiv.style.borderColor = '#ED7B84';
 
-      // Initiate the Themes
+      // Auto-Animation
       am4core.useTheme(am4themes_animated);
+      // Material Coloring
+      // am4core.useTheme(am4themes_material);
 
       // Create chart instance
       var chart = am4core.create(spaceDiv, am4charts.SlicedChart);
@@ -86,7 +88,7 @@
     svgButton.style = styling;
 
     var pointer = 0;
-    var svgArray = [svgHuman, svgBottle, svgCan, svgApple];
+    var svgArray = [svgHuman, svgBottle, svgCan, svgApple, svgJam];
 
     function buttonAction() {
       pointer++;
