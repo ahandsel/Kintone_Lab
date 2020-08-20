@@ -3,11 +3,10 @@
 
   // Kintone event triggered after the record list page is displayed.
   kintone.events.on('app.record.index.show', function (event) {
-    function charting(svgData) {
+    function charting(svgData, type) {
       // Retrieve & configure the space element below the record list's header
       var spaceDiv = kintone.app.getHeaderSpaceElement();
       spaceDiv.style.height = '500px';
-      // spaceDiv.style.width = '100vw';
       spaceDiv.style.marginLeft = '25px';
       spaceDiv.style.marginRight = '25px';
       spaceDiv.style.border = 'solid';
@@ -21,6 +20,7 @@
 
       // initial fade in effect
       chart.hiddenState.properties.opacity = 0;
+
       // Create JSON object from Kintone records & pass it onto amCharts
       var kData = event.records.map(function (record) {
         return {
@@ -34,24 +34,34 @@
       var series = chart.series.push(new am4charts.PictorialStackedSeries());
       series.dataFields.value = 'value';
       series.dataFields.category = 'name';
-      series.alignLabels = true;
+
+      if (type !== 'minimal') {
+        // Putting labels next to the slices
+        series.alignLabels = true;
+        series.labelsOpposite = false;
+
+        // Ticks connect slice to its label
+        series.ticks.template.locationX = 0.3;
+        series.ticks.template.locationY = 0.5;
+        series.ticks.template.strokeWidth = 2;
+        series.ticks.template.strokeOpacity = 0.7;
+        series.ticks.template.stroke = am4core.color("#DEB886");
+
+        chart.legend = new am4charts.Legend();
+        chart.legend.position = 'right';
+        chart.legend.valign = 'bottom';
+        chart.legend.maxWidth = 'undefined';
+      }
+      if (type == 'minimal') {
+        series.labels.template.fill = am4core.color("#FFFFFF");
+        series.labels.template.fontSize = 0;
+      }
 
       // Set the SVG data (from K_SVG.js)
       if (typeof svgData == 'undefined') {
         svgData = svgApple;
       }
       series.maskSprite.path = svgData;
-
-      // Ticks connect slice to its label
-      series.ticks.template.locationX = 1;
-      series.ticks.template.locationY = 0.5;
-
-      // Container label elements are put in.
-      series.labelsContainer.width = 200;
-
-      chart.legend = new am4charts.Legend();
-      chart.legend.position = 'left';
-      chart.legend.valign = 'bottom';
 
       // --- Optional ---
 
@@ -67,26 +77,39 @@
     if (document.getElementById('changeButton') != null) {
       return;
     }
+    var styling = 'display:inline-block;box-sizing:border-box;padding:0 16px;min-width:163px;height:48px;outline:none;border:1px solid #e3e7e8;background-color:#f7f9fa;box-shadow:1px 1px 1px #fff inset;color:#3498db;text-align:center;line-height:48px;font-weight: bold;';
     // Set a button
     var svgButton = document.createElement('button');
     svgButton.id = 'changeButton';
-    svgButton.innerText = 'Change Graphic';
+    svgButton.innerText = 'Change Image';
     svgButton.onclick = buttonAction;
-    svgButton.style = 'display:inline-block;box-sizing:border-box;padding:0 16px;min-width:163px;height:48px;outline:none;border:1px solid #e3e7e8;background-color:#f7f9fa;box-shadow:1px 1px 1px #fff inset;color:#3498db;text-align:center;line-height:48px;font-weight: bold;';
+    svgButton.style = styling;
 
-    var pointer = 1;
+    var pointer = 0;
     var svgArray = [svgHuman, svgBottle, svgCan, svgApple];
 
     function buttonAction() {
+      pointer++;
       if (pointer >= svgArray.length) {
         pointer = 0;
       }
       charting(svgArray[pointer]);
-      pointer++;
     }
 
-    // Get the header menu space element and set the button there
+    // Set a button
+    var imgOnlyBtn = document.createElement('button');
+    imgOnlyBtn.id = 'imgOnlyID';
+    imgOnlyBtn.innerText = 'Graph Only';
+    imgOnlyBtn.onclick = imgOnlyAction;
+    imgOnlyBtn.style = styling;
+
+    function imgOnlyAction() {
+      charting(svgArray[pointer], 'minimal');
+    }
+
+    // Append Buttons to Kintone Header
     kintone.app.getHeaderMenuSpaceElement().appendChild(svgButton);
+    kintone.app.getHeaderMenuSpaceElement().appendChild(imgOnlyBtn);
 
     charting(svgHuman);
   }); // end am4core.ready()
