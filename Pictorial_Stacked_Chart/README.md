@@ -96,3 +96,18 @@ https://www.ars.usda.gov/ARSUserFiles/80400530/pdf/DBrief/21_Beverage_choices_ad
 | Milk                | 19   | 18     |
 | 100% juice          | 17   | 15     |
 | Diet beverages      | 16   | 14     |
+
+
+##
+
+Ingredieent, Percentage, Per 400 grams
+Hazelnuts, 13%, 52g
+Cocoa Powder, 7.4%, 29.6g
+Vanillin, 0.02%, 0.08 g
+Sugar, 55%, 216 g
+Skim milk powder,
+Vegetable Oil,
+Soy Lecithin (emulsifier),
+
+We operate a high-precision, automatized dosing system. A 400g Nutella® glass contains only 
+0.08g of vanillin: a very little amount compared to the total weight, but enough to heighten and stabilize the flavour and fragrance of Nutella®. Its unique aroma complements the flavours of the other ingredients in the formula and adds the finishing touch to the recipe, guaranteeing Nutella®'s original taste.
