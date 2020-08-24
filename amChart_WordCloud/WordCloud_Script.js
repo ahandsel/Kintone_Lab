@@ -21,7 +21,7 @@
     // Apply amCharts Themes for automatic animation
     am4core.useTheme(am4themes_animated);
 
-    // Creating chart instance#
+    // Creating chart instance
     let chart = am4core.create(headerSpace, am4plugins_wordCloud.WordCloud);
 
     // Color Setting
@@ -63,9 +63,9 @@
 
     // - - - Extra Functionality - - -
     // Randomly generate new graphics every 2 minutes
-    setInterval(function () {
-      series.dataItems.getIndex(Math.round(Math.random() * (series.dataItems.length - 1))).setValue("value", Math.round(Math.random() * 10));
-    }, 120000)
+    // setInterval(function () {
+    //   series.dataItems.getIndex(Math.round(Math.random() * (series.dataItems.length - 1))).setValue("value", Math.round(Math.random() * 10));
+    // }, 120000)
 
     // Enable export
     chart.exporting.menu = new am4core.ExportMenu();
@@ -76,13 +76,13 @@
     // Disable mouse wheel zooming
     chart.chartContainer.wheelable = false;
 
-    series.events.on("arrangestarted", function (ev) {
-      ev.target.baseSprite.preloader.show(0);
-    });
+    // series.events.on("arrangestarted", function (ev) {
+    //   ev.target.baseSprite.preloader.show(0);
+    // });
 
-    // Displaying progress indicator
-    series.events.on("arrangeprogress", function (ev) {
-      ev.target.baseSprite.preloader.progress = ev.progress;
-    });
+    // // Displaying progress indicator
+    // series.events.on("arrangeprogress", function (ev) {
+    //   ev.target.baseSprite.preloader.progress = ev.progress;
+    // });
   });
 })();
