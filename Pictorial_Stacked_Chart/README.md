@@ -38,7 +38,46 @@ https://www.flaticon.com/free-icon/water_824188
 SVG Paths by MDN
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
 
-## SVG data into amCharts
+
+
+# Notes on Pictorial Stacked Chart x Kintone
+- Using amCharts JS library
+- amCharts_Demo is a recreation of amCharts demo sites
+
+## Resource & amCharts Documentations
+#### amCharts Demos:
+  - [Human - Pictorial Stacked Chart Demo](https://www.amcharts.com/demos/pictorial-stacked-chart/)
+  - [Wine - Sliding Pictorial Chart](https://www.amcharts.com/demos/pictorial-chart/)
+  - [Sausage - Horizontal Pictorial Chart](https://www.amcharts.com/demos/horizontal-pictorial-chart/)
+  - [Water - Custom Pictorial Slice Shape](https://www.amcharts.com/demos/custom-pictorial-slice-shape/)
+
+#### amCharts Documentations on Pictorial Charts
+- [Anatomy of a Sliced Chart](https://www.amcharts.com/docs/v4/chart-types/sliced-chart/)
+- [*Pictorial Series*](https://www.amcharts.com/docs/v4/chart-types/sliced-chart/#Pictorial_series)
+- [PictorialStackedSeries](https://www.amcharts.com/docs/v4/reference/pictorialstackedseries/)
+- [SVG Path & Pictorial Charts](https://www.amcharts.com/docs/v4/reference/pictorialstackedseries/#maskSprite_property)
+
+#### Other Notes
+- [Error - “Chart was not disposed” warning](https://www.amcharts.com/docs/v4/tutorials/chart-was-not-disposed/)
+- [SVG Paths by Mozilla](https://developer.mozilla.org/ja/docs/Web/SVG/Tutorial/Paths)
+
+---
+
+## Specific Notes:
+#### What is Pictorial Series
+- In a nutshell Pictorial series is just a straight Pyramid series with some cool mask applied on it.
+- An SVG path is series of codes, describing geometrical shapes. For more information about it visit this [Mozilla article](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths).
+
+#### Partially filled shapes
+- Do the following when you want to fill only part of the SVG path. e.g. bottle below the cap
+- Set the starting & ending point of the path:
+  - startLocation & endLocation properties
+  - numeric values in the range from 0 (zero) to 1 (one)
+- 0 = the very top (or left for horizontal series)
+- 1 = bottom/right
+- Use series' slicesContainer.background to set how the rest of the shape gets filled
+
+#### SVG data into amCharts
 **maskSprite**
 * https://www.amcharts.com/docs/v4/reference/pictorialstackedseries/#maskSprite_property
 * A Sprite element that is used as a series mask.
@@ -48,6 +87,18 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
 et iconPath = "M511.82,...";
 series.maskSprite.path = iconPath;
 ```
+
+---
+
+## Building you Kintone x Pictorial Charts:
+### Create a Kintone App from the CSV file
+- [Article_Data.csv](Article_Data.csv)
+### CDN Link:
+- https://cdn.amcharts.com/lib/4/core.js
+- https://cdn.amcharts.com/lib/4/charts.js
+- https://cdn.amcharts.com/lib/4/themes/animated.js
+- [K_PicStackChart_Button.js](K_PicStackChart_Button.js)
+  - CDN Link Option: https://drive.google.com/uc?export=view&id=1KbXbFtfnMGvxab75788yMphZeRw9Pqbr
 
 ---
 
