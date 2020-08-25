@@ -48,25 +48,22 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
 et iconPath = "M511.82,...";
 series.maskSprite.path = iconPath;
 ```
-## Pepsi Data
 
-https://www.eatthis.com/what-is-in-soda/
+---
 
-89% Carbonated Water
-8.9% High-fructose Corn Syrup
-1% Phosphoric and Citric Acids
-0.4% Caramel Color
-0.7% Natural Flavoring & Caffeine
-
-
-https://www.pepsi.ca/products/pepsi-591ml#:~:text=CARBONATED%20WATER%2C%20GLUCOSE%2DFRUCTOSE%20AND,%2C%20CITRIC%20ACID%2C%20NATURAL%20FLAVOUR.
-Total: 591 ML = 591000 milligram
-Sodium 20 milligram
-Sugar 69000 milligram
-
-
-
-https://www.pepsicobeveragefacts.com/Home/Product?formula=35005*26*01-01&form=RTD&size=20
+## Sample Data:
+### Pepsi Breakdown:
+- https://www.eatthis.com/what-is-in-soda/
+- https://www.pepsi.ca/products/pepsi-591ml#:~:text=CARBONATED%20WATER%2C%20GLUCOSE%2DFRUCTOSE%20AND,%2C%20CITRIC%20ACID%2C%20NATURAL%20FLAVOUR.
+- https://www.pepsicobeveragefacts.com/Home/Product?formula=35005*26*01-01&form=RTD&size=20
+- 89% Carbonated Water
+- 8.9% High-fructose Corn Syrup
+- 1% Phosphoric and Citric Acids
+- 0.4% Caramel Color
+- 0.7% Natural Flavoring & Caffeine
+- Total: 591 ML = 591000 milligram
+- Sodium 20 milligram
+- Sugar 69000 milligram
 
 1 Bottle:
 * [12 fl oz](https://www.pepsicobeveragefacts.com/Home/Product?formula=35005*26*01-01&form=RTD&size=20)
@@ -76,11 +73,11 @@ https://www.pepsicobeveragefacts.com/Home/Product?formula=35005*26*01-01&form=RT
 * Caffeine 63 mg
 * Phosphorus 80 mg
 
-89% Carbonated Water
-8.9% High-fructose Corn Syrup
-1% Phosphoric and Citric Acids
-0.4% Caramel Color
-0.7% Natural Flavoring & Caffeine
+- 89% Carbonated Water
+- 8.9% High-fructose Corn Syrup
+- 1% Phosphoric and Citric Acids
+- 0.4% Caramel Color
+- 0.7% Natural Flavoring & Caffeine
 
 ### Beverage Choice
 Percentage of adults who consumed beverages on any
@@ -98,11 +95,11 @@ https://www.ars.usda.gov/ARSUserFiles/80400530/pdf/DBrief/21_Beverage_choices_ad
 | Diet beverages      | 16   | 14     |
 
 
-## Nutella Unmasked
-
-Ingredient, Percentage
-Soy Lecithin & Vanillin, .5%
-Cocoa Powder & Skim milk powder, 8.5%
-Hazelnuts, 13%
-Palm Oil, 23%
-Sugar, 55%
+### Nutella Unmasked
+* https://lemonandjinja.com/blog/chocolate-y-hazelnutty-goodness
+| Ingredient | Percentage |
+| Soy Lecithin & Vanillin | 0.5% |
+| Cocoa Powder & Skim milk powder | 8.5% |
+| Hazelnuts | 13% |
+|Palm Oil | 23% |
+| Sugar | 55% |
