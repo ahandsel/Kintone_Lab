@@ -4,6 +4,7 @@
   // Kintone event triggered after the record list page is displayed.
   kintone.events.on('app.record.index.show', function (event) {
     function charting(svgData, type) {
+      am4core.disposeAllCharts();
       // Retrieve & configure the space element below the record list's header
       var spaceDiv = kintone.app.getHeaderSpaceElement();
       spaceDiv.style.height = '500px';
