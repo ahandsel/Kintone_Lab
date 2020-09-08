@@ -88,6 +88,9 @@ et iconPath = "M511.82,...";
 series.maskSprite.path = iconPath;
 ```
 
+#### Simply an SVG file into a single path
+- Excellent tool: https://jakearchibald.github.io/svgomg/
+
 ---
 
 ## Building you Kintone x Pictorial Charts:
