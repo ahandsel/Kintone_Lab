@@ -38,6 +38,7 @@
       return result;
     }, []);
     chart.data = caffeineTotals;
+    console.log(caffeineTotals);
 
     // Create chart series
     var series = chart.series.push(new am4charts.PictorialStackedSeries());
