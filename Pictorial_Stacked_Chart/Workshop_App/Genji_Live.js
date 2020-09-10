@@ -34,14 +34,14 @@
       var kData = event.records.reduce(function (accumulator, current) {
         // Check if this category already exists
         var category = accumulator.find(function (value) {
-          return value.name === current.Drop_down_0.value;
+          return value.name === current.Drop_down.value;
         });
         // Create new category or increment as appropriate
         if (category) {
           category.value++;
         } else {
           accumulator.push({
-            name: current.Drop_down_0.value,
+            name: current.Drop_down.value,
             value: 1
           });
         }
@@ -65,8 +65,8 @@
         // Ticks connect slice to its label
         series.ticks.template.locationX = 0.3;
         series.ticks.template.locationY = 0.5;
-        series.ticks.template.strokeWidth = 2;
-        series.ticks.template.strokeOpacity = 0.7;
+        series.ticks.template.strokeWidth = 5; //2
+        series.ticks.template.strokeOpacity = 1; //0.7
         series.ticks.template.stroke = am4core.color("#DEB886");
 
         chart.legend = new am4charts.Legend();
@@ -84,6 +84,8 @@
         svgData = svgApple;
       }
       series.maskSprite.path = svgData;
+      console.log('series');
+      console.log(series);
 
       // Optional - Enable export
       chart.exporting.menu = new am4core.ExportMenu();
