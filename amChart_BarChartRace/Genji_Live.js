@@ -94,7 +94,6 @@
       interval = setInterval(function () {
         nextYear();
       }, stepDuration);
-      nextYear();
     }
 
     function stop() {
@@ -194,9 +193,7 @@
 
     // Register the auto play function
     series.events.on("inited", function () {
-      setTimeout(function () {
-        play(); // this starts interval
-      }, 2000);
+      play();
     });
   });
 })();
