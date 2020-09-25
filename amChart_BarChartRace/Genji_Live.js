@@ -19,7 +19,7 @@
     var chart = am4core.create(spaceDiv, am4charts.XYChart);
     chart.padding(40, 40, 40, 40);
 
-    // Shifting the units -> K, M, Billion
+    // Shorting numbers by units: K, M, B (Thousands, Millions, Billions)
     chart.numberFormatter.bigNumberPrefixes = [{
         "number": 1e+3,
         "suffix": "K"
@@ -60,6 +60,7 @@
     valueAxis.rangeChangeDuration = stepDuration;
     valueAxis.extraMax = 0.1;
 
+    // Y-axis unit information
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.categoryY = "Manufacturer";
     series.dataFields.valueX = "value";
@@ -112,7 +113,7 @@
       }
 
       // Filtering out the firms that did not make the top 5 cut
-      var newData = data[year];
+      var newData = allData[year];
       var itemsWithNonZero = 0;
       for (var i = 0; i < chart.data.length; i++) {
         chart.data[i].value = newData[i].value;
@@ -139,48 +140,59 @@
       });
     }
 
-
     categoryAxis.sortBySeries = series;
+
+    // Kintone REST API Request
+    // kintone.api(pathOrUrl, method, params, opt_callback, opt_errback)
+    // pathOrUrl = kintone.api.url('/k/v1/records', true);
 
     var body = {
       'app': kintone.app.getId(),
       'query': kintone.app.getQueryCondition() + 'limit 500'
     };
 
-    var data = {};
+    var allData = {};
 
     // Array [Array] based on year, Manufacturer: value
-    // On slide - Alograpthim to generate this output
+    // On slide - Algorithm to generate this output
+    // Default Field Codes: Year = Number; Manufacturer = Drop_down; PhonesSold = Number_0
     kintone.api(kintone.api.url('/k/v1/records', true), 'GET', body, function (resp) {
-      // success
+      // Success
+
       var records = resp.records;
-      // var data = {};
       records.forEach(function (record) {
-        if (data.hasOwnProperty(record.Year.value)) {
-          data[record.Year.value].push({
-            Manufacturer: record.Manufacturer.value,
-            value: record.PhonesSold.value
+
+        if (allData.hasOwnProperty(record.Number.value)) {
+          allData[record.Number.value].push({
+            Manufacturer: record.Drop_down.value,
+            value: record.Number_0.value
           });
           return;
         }
-        data[record.Year.value] = [{
-          Manufacturer: record.Manufacturer.value,
-          value: record.PhonesSold.value
+
+        allData[record.Number.value] = [{
+          Manufacturer: record.Drop_down.value,
+          value: record.Number_0.value
         }];
-        console.log(data[record.Year.value]);
+
+        console.log(record.Number.value);
+        console.log(allData[record.Number.value]);
+
       });
-      chart.data = JSON.parse(JSON.stringify(data[year]));
-      // ?
+
+      chart.data = JSON.parse(JSON.stringify(allData[year]));
+
       categoryAxis.zoom({
         start: 0,
         end: 1 / chart.data.length
       });
 
     }, function (error) {
-      // error
+      // Error
       console.log(error);
     });
-    // Check if removed
+
+    // Register the auto play function
     series.events.on("inited", function () {
       setTimeout(function () {
         play(); // this starts interval
