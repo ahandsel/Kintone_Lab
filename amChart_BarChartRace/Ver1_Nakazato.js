@@ -31,20 +31,6 @@
     label.dx = -15;
     label.fontSize = 50;
 
-    var playButton = chart.plotContainer.createChild(am4core.PlayButton);
-    playButton.x = am4core.percent(97);
-    playButton.y = am4core.percent(95);
-    playButton.dy = -2;
-    playButton.verticalCenter = "middle";
-    playButton.events.on("toggled", function(event) {
-      if (event.target.isActive) {
-        play();
-      }
-      else {
-        stop();
-      }
-    })
-
     var stepDuration = 4000;
 
     var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
@@ -63,14 +49,14 @@
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.categoryY = "Manufacturer";
     series.dataFields.valueX = "value";
-    series.tooltipText = "{valueX.value}"
+    series.tooltipText = "{valueX.value}";
     series.columns.template.strokeOpacity = 0;
     series.columns.template.column.cornerRadiusBottomRight = 5;
     series.columns.template.column.cornerRadiusTopRight = 5;
     series.interpolationDuration = stepDuration;
     series.interpolationEasing = am4core.ease.linear;
 
-    var labelBullet = series.bullets.push(new am4charts.LabelBullet())
+    var labelBullet = series.bullets.push(new am4charts.LabelBullet());
     labelBullet.label.horizontalCenter = "right";
     labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#.0as')}";
     labelBullet.label.textAlign = "end";
@@ -91,7 +77,7 @@
     function play() {
       interval = setInterval(function(){
         nextYear();
-      }, stepDuration)
+      }, stepDuration);
       nextYear();
     }
 
@@ -102,10 +88,11 @@
     }
 
     function nextYear() {
-      year++
+      year++;
 
       if (year > 2014) {
-        year = 2005;
+        stop();
+        return;
       }
 
       var newData = data[year];
@@ -137,13 +124,13 @@
     
     var body = {
       'app': kintone.app.getId(),
-      'query': 'limit 500'
+      'query': kintone.app.getQueryCondition() + 'limit 500'
     };
 
     var data = {};
     kintone.api(kintone.api.url('/k/v1/records', true), 'GET', body, function(resp) {
       // success
-      var records = event.records;
+      var records = resp.records;
       // var data = {};
       records.forEach(function(record) {
         if (data.hasOwnProperty(record.Year.value)) {
@@ -169,7 +156,7 @@
     });
     series.events.on("inited", function() {
       setTimeout(function() {
-         playButton.isActive = true; // this starts interval
+         play();
       }, 2000);
     });
   });
