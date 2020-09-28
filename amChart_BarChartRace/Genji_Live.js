@@ -34,7 +34,7 @@
       }
     ];
 
-    // Label inside the "bar"
+    // The label displaying the year
     var label = chart.plotContainer.createChild(am4core.Label);
     label.x = am4core.percent(97);
     label.y = am4core.percent(95);
@@ -80,7 +80,7 @@
 
     chart.zoomOutButton.disabled = true;
 
-    // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+    // Color is set to columns with chart.colors color set
     series.columns.template.adapter.add("fill", function (fill, target) {
       return chart.colors.getIndex(target.dataItem.index);
     });
@@ -111,7 +111,7 @@
         return;
       }
 
-      // Filtering out the firms that did not make the top 5 cut
+      // Only display the Manufacturers with phones sold
       var newData = allData[year];
       var itemsWithNonZero = 0;
       for (var i = 0; i < chart.data.length; i++) {
@@ -121,15 +121,13 @@
         }
       }
 
-      // Slow start
-      if (year == 2005) {
-        series.interpolationDuration = stepDuration / 4;
-        valueAxis.rangeChangeDuration = stepDuration / 4;
-      } else {
-        series.interpolationDuration = stepDuration;
-        valueAxis.rangeChangeDuration = stepDuration;
-      }
+      // Following two are animation setting using time (in milliseconds) values
+      // Animating the bars increase/decreasing based on value changes
+      series.interpolationDuration = stepDuration;
+      // Animating the zooming in/out on the bars based on the number of bars being displayed
+      valueAxis.rangeChangeDuration = stepDuration;
 
+      // Transition the bars & redraw the graph based on the next years data without complete re-parsing of data
       chart.invalidateRawData();
       label.text = year.toString();
 
