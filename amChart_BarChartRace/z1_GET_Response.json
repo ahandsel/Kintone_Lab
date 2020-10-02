@@ -1,0 +1,101 @@
+{
+  "records": [
+    {
+      "Updated_datetime": {
+        "type": "UPDATED_TIME",
+        "value": "2020-09-28T04:36:00Z"
+      },
+      "Created_datetime": {
+        "type": "CREATED_TIME",
+        "value": "2020-09-28T04:36:00Z"
+      },
+      "Number_0": {
+        "type": "NUMBER",
+        "value": "53910000"
+      },
+      "Number": {
+        "type": "NUMBER",
+        "value": "2014"
+      },
+      "Record_number": {
+        "type": "RECORD_NUMBER",
+        "value": "180"
+      },
+      "Created_by": {
+        "type": "CREATOR",
+        "value": {
+          "code": "Administrator",
+          "name": "Administrator"
+        }
+      },
+      "$revision": {
+        "type": "__REVISION__",
+        "value": "1"
+      },
+      "Drop_down": {
+        "type": "DROP_DOWN",
+        "value": "ZTE"
+      },
+      "Updated_by": {
+        "type": "MODIFIER",
+        "value": {
+          "code": "Administrator",
+          "name": "Administrator"
+        }
+      },
+      "$id": {
+        "type": "__ID__",
+        "value": "180"
+      }
+    },
+    {
+      "Updated_datetime": {
+        "type": "UPDATED_TIME",
+        "value": "2020-09-28T04:36:00Z"
+      },
+      "Created_datetime": {
+        "type": "CREATED_TIME",
+        "value": "2020-09-28T04:36:00Z"
+      },
+      "Number_0": {
+        "type": "NUMBER",
+        "value": "56529000"
+      },
+      "Number": {
+        "type": "NUMBER",
+        "value": "2014"
+      },
+      "Record_number": {
+        "type": "RECORD_NUMBER",
+        "value": "179"
+      },
+      "Created_by": {
+        "type": "CREATOR",
+        "value": {
+          "code": "Administrator",
+          "name": "Administrator"
+        }
+      },
+      "$revision": {
+        "type": "__REVISION__",
+        "value": "1"
+      },
+      "Drop_down": {
+        "type": "DROP_DOWN",
+        "value": "Xiaomi"
+      },
+      "Updated_by": {
+        "type": "MODIFIER",
+        "value": {
+          "code": "Administrator",
+          "name": "Administrator"
+        }
+      },
+      "$id": {
+        "type": "__ID__",
+        "value": "179"
+      }
+    }
+  ],
+  "totalCount": null
+}

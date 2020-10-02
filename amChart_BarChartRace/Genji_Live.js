@@ -158,8 +158,13 @@
     kintone.api(kintone.api.url('/k/v1/records', true), 'GET', body,
       function (resp) {
         // Successful API Call
-
+        console.log('resp');
+        console.log(resp);
         var records = resp.records;
+
+        console.log('GET Response Records');
+        console.log(records);
+
         records.forEach(function (record) {
 
           if (allData.hasOwnProperty(record.Number.value)) {

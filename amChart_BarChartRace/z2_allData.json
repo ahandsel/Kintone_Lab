@@ -1,0 +1,732 @@
+{
+  "2005": [{
+      "Manufacturer": "ZTE",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "51773800"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "28590600"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "265614800"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "144920400"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "54924600"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "0"
+    }
+  ],
+  "2006": [{
+      "Manufacturer": "ZTE",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "73641600"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "116480100"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "344915900"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "209250900"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "61986000"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "0"
+    }
+  ],
+  "2007": [{
+      "Manufacturer": "ZTE",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "101358400"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "154540700"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "435453100"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "164307000"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "78576300"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "2300000"
+    }
+  ],
+  "2008": [{
+      "Manufacturer": "ZTE",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "93414500"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "199182000"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "472315000"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "106590000"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "102555400"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "12000000"
+    }
+  ],
+  "2009": [{
+      "Manufacturer": "ZTE",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "54873400"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "235772000"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "440881600"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "58475200"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "122055300"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "24889000"
+    }
+  ],
+  "2010": [{
+      "Manufacturer": "ZTE",
+      "value": "28768700"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "41819200"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "281065800"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "461318200"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "38553700"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "114154600"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "23814700"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "24688400"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "47451600"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "46598300"
+    }
+  ],
+  "2011": [{
+      "Manufacturer": "ZTE",
+      "value": "56881800"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "32597500"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "313904200"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "422478300"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "40269000"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "86370900"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "40663400"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "43266900"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "51541900"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "89263200"
+    }
+  ],
+  "2012": [{
+      "Manufacturer": "ZTE",
+      "value": "67344400"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "37176600"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "384631200"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "333938000"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "33916300"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "58015900"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "47288300"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "32121800"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "34210300"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "130133200"
+    }
+  ],
+  "2013": [{
+      "Manufacturer": "ZTE",
+      "value": "59898800"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "49531300"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "37595700"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "444444200"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "250793100"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "69024500"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "45284700"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "53295100"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "32601400"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "150785900"
+    }
+  ],
+  "2014": [{
+      "Manufacturer": "ZTE",
+      "value": "53910000"
+    },
+    {
+      "Manufacturer": "Xiaomi",
+      "value": "56529000"
+    },
+    {
+      "Manufacturer": "TCL Communication",
+      "value": "64026000"
+    },
+    {
+      "Manufacturer": "Sony",
+      "value": "37791000"
+    },
+    {
+      "Manufacturer": "Siemens",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Samsung",
+      "value": "392546000"
+    },
+    {
+      "Manufacturer": "Nokia",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Motorola",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Microsoft",
+      "value": "185660000"
+    },
+    {
+      "Manufacturer": "Micromax",
+      "value": "37094000"
+    },
+    {
+      "Manufacturer": "LG",
+      "value": "76096000"
+    },
+    {
+      "Manufacturer": "Lenovo Motorola",
+      "value": "84029000"
+    },
+    {
+      "Manufacturer": "Lenovo",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Huawei",
+      "value": "70499000"
+    },
+    {
+      "Manufacturer": "HTC",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Coolpad",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "BlackBerry",
+      "value": "0"
+    },
+    {
+      "Manufacturer": "Apple",
+      "value": "191426000"
+    }
+  ]
+}
