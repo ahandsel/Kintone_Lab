@@ -1,53 +1,71 @@
 ---
-title: ハッカソンでつかえるkintoneカスタマイズ手順
 title: Kintone Customization Tips for Hackathons
 tags: Kintone, Hackathon, Python, Node.js, JavaScript
 author: RyBB
 url: https://qiita.com/RyBB/items/290c7f4ea5a45da5b650
 ---
+
 # Introduction
 
 Hackathon is a race against time. In order to focus on the cool front-end development, you want to quickly setup a database to store your data.
 
-That is where **Kintone** comes in!
+That is where **Kintone database platform** comes in!
 
-You can **create a database in minutes** with Kintone!
+You can **create Web Database in minutes** with Kintone!
 With Kintone's REST API and useful docs & tutorials, it is easy to export and import data from 3rd party services.
 
 This article will outline how Kintone can be used in your hackathon project!
 
-::white_check_mark:: このマークがある部分には、**コピペで即利用できるコード** があります
-（ブラウザの検索を使うとすぐに見つかると思います！）
+# 1. Getting a FREE Kintone Environment
 
-# 1. kintone環境の入手方法
+## ① Sign-Up for [Developer Program Account](https://developer.kintone.io/hc/en-us) (Website)
 
-通常は1ユーザー1500円の有料契約をしないと使えません。
+#### ⇢ [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
 
-> ▼ kintone 料金体系
-> <https://kintone.cybozu.co.jp/price/>
+  - ⚠️ Do NOT use Safari ⚠️
+  - ⚡ Accept Cookies First ⚡
+  - ✅ Use Chrome & Firefox ✅
 
-でも、ハッカソンで使うのにお金払うとか嫌ですよね（僕も嫌です）
+[Kintone Developer Program](https://developer.kintone.io/hc/en-us) is where all the Kintone API Documentation and tutorial lives.  
+Join the developer community by posting your questions or discovery on the [community section](https://developer.kintone.io/hc/en-us/community/topics/200378107)!
 
-そんなあなたに **kintone 開発者ライセンス!!**
+## ② THEN Create a Kintone Subdomain (Database)
 
-kintone 開発者ライセンスを使えばkintoneが <font color="red">**無償**</font> で利用できます。
-`ユーザーは5名まで / 本番運用はしない` などの制限はありますがハッカソン利用であれば問題ありません。
+#### ⇢ [bit.ly/K_DevLic](https://bit.ly/K_DevLic)
 
-## 開発者ライセンスの取得方法
+  - ⚠️ No Special Characters ⚠️
+  - ⚡ ONLY use **lowercase**, **numbers**, & **hyphens** when creating your subdomain ⚡
 
-cybozu developer network (devnet)から申請が可能です。
+Kintone subdomains are unique and will be required for login and API calls.  
+To access your Kintone, you simply go to `SUBDOMAIN`.kintone.com .  
+For example, if `developer` is your subdomain, you would visit `developer.kintone.com`.
 
-> cybozu developer network
-> <https://developer.cybozu.io/hc/ja>
+## 📺️ Quick video on the sign-up steps
 
-<img width="1122" alt="スクリーンショット 2019-09-13 12.43.36.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/153051/459ee342-a42b-a067-b275-4ee4aae3bdac.png">
+[youtu.be/Gzz8SbTuoFg](https://youtu.be/Gzz8SbTuoFg)
 
-トップページに「kintone開発者ライセンスを取得」があるのでこちらから申請が可能です。
+## Logging into Kintone
 
-<font color="gold">**cybozu developer network に登録するだけではダメです！！**</font>
-<font color="red">必ず**「kintone開発者ライセンスを取得」**ボタンを押して申し込みをしてください！</font>
+After receiving an `Developer License` confirmation, click on `Activate ` emailyour Kintone  and credentials, you're ready to log into Kintone.
 
-# 2. kintoneの基本操作
+
+Your Kintone Developer License should have a unique URL, in the form of https://{subdomain_name}.kintone.com . Access this URL to display the login page.
+
+
+On your first access to the page, you will be asked to set up a password.
+After that, you will be able to log into your domain with your email and newly set password.
+
+# 2. Getting Started with Kintone
+
+## Creating Users on Kintone
+
+## Creating Web Databases (Kintone Apps)
+## Inputting Data manually
+
+
+ Generating API Tokens
+ Checking the Database's identifiers
+ Inputting & Exporting Data via REST API
 
 kintone環境を申請して、メールアドレス宛にアクセスURLが届いたらkintoneを使うことができるようになります。
 まずは `ブラウザ操作` でkintoneをいじっていきます。
