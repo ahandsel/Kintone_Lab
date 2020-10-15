@@ -41,6 +41,7 @@
               // Error
               console.log(error);
             });
+          obniz.display.print('Saved to Kintone');
         }
 
         // Display the current count on Obniz
