@@ -7,8 +7,7 @@
 Obniz Board is an IoT Microprocessor that is easily programable with JavaScript!  
 The code can be stored on the cloud & you have full device control with just one JavaScript library, making it an ideal IoT device for a hackathon.
 
-2-min video on Obniz Board's functionality:  
-* https://youtu.be/sFnDtFq3dJY
+2-min video on Obniz Board's functionality: https://youtu.be/sFnDtFq3dJY
 
 ### What is [Kintone](https://www.kintone.com/)?
 Kintone is a cloud platform thatcreates Web Databases ridiculously quickly!
@@ -16,16 +15,17 @@ Databases are created with intuitive drag-and-drop GUI and since your data lives
 
 ## Outline
 * [Introduction](#introduction)
-* [Get a Obniz Board](#get-a-obniz-board)
+* [Get an Obniz Board](#get-a-obniz-board)
 * [Connect Obniz Board to WiFi](#connect-obniz-board-to-wifi)
 * [Configure the Script.js](#configure-the-scriptjs)
 * [Get a FREE Kintone Developer License](#get-a-free-kintone-developer-license)
 * [Create the Database](#create-the-database)
+* [Verify](#verify)
 * [Conclusion](#conclusion)
-  * [References for Obniz Board](#references-for-obniz-board)
-  * [References for Kintone](#references-for-kintone)
+* [References for Obniz Board](#references-for-obniz-board)
+* [References for Kintone](#references-for-kintone)
 
-## Get a Obniz Board
+## Get an Obniz Board
 Obniz Board is on [Amazon](https://www.amazon.com/dp/B07DD6FK8G) for $49 (At the time of publishing).  
 This tutorial assumes you are using the [original Obniz Board](https://www.amazon.com/dp/B07DD6FK8G), but you can use their [newer Obniz Board 1Y](https://www.amazon.com/dp/B082MDPRWZ) as well.
 
@@ -34,7 +34,7 @@ This tutorial assumes you are using the [original Obniz Board](https://www.amazo
 Now that you are a proud owner of Obniz Board, time to plug it in & connect it to WiFi.
 
 Overview of the parts
-![Image pointing to the 3 parts of Obniz Board. Micro USB: power can be turned on / off by connecting / disconnecting to the battery; Dial switch: cursor is moved when turn the dial witch. Click the dial switch to select it; 12x IOs with motor driver (up to 1A) & Analog Input](https://obniz.com/doc/reference/board-1y/quick-start/images/board_description.png?)
+![Graphic overview of the Obniz Board. Micro USB: power can be turned on/off by connecting/disconnecting to the battery; Dial switch: cursor is moved when turning the dial witch. Click the dial switch to select it; 12x IOs with motor driver (up to 1A) & Analog Input](https://obniz.com/doc/reference/board-1y/quick-start/images/board_description.png?)
 
 We will be using the **Dial Switch** as the input mechanism.
 
@@ -70,6 +70,8 @@ If an error is displayed or Obniz Board is not starting up, refer to [Obniz Trou
 
 The code needed for this Obniz Board x Kintone integration is below.
 Save the code as `Script.js` and replace the Xs in Line 5 with your obnizID.
+
+⚠️ If you do not update the script with your obnizID, you will get a prompt each time you view the Kintone Database App.
 
 ``` javascript
 (() => {
@@ -129,50 +131,68 @@ Save the code as `Script.js` and replace the Xs in Line 5 with your obnizID.
 
 ## Get a FREE Kintone Developer License
 
-#### ① Sign-Up for Developer Program Account (Website)
+### ① Sign-Up for Developer Program Account (Website)
 * [bit.ly/KDP_signup](https://bit.ly/KDP_signup)
 * ⚠️ Do NOT use Safari
 * ⚡ Accept Cookies First
 * ✅ Use Chrome & Firefox
 
-#### ② THEN Create a Kintone Subdomain (Database)
+### ② THEN Create a Kintone Subdomain (Database)
 * [bit.ly/K_DevLic](https://bit.ly/K_DevLic)
 * ⚠️ No Special Characters
 * ⚡ Only use lowercase, numbers, & hyphens in the Subdomain
 
-#### 📺️ Quick Video on the Sign-Up Process:
+### 📺️ Quick Video on the Sign-Up Process:
 {% youtube Gzz8SbTuoFg %}
-
-<!-- https://youtu.be/Gzz8SbTuoFg -->
 
 ## Create the Database
 Databases in Kintone are called "Apps".
 
+This video will go over how to make a Kintone Database for this project.
+The steps it takes are also written below.
+
 {% youtube BN2MUETsyXI %}
-<!-- {% youtube r1w2yTNmKuQ %} -->
 
 1. Log in to your Kintone Subdomain
     * The URL to your Kintone is [`YOUR_SUBDOMAIN`.kintone.com]()
     * Ex/ `demo` subdomain is accessed at [demo.kintone.com](http://demo.kintone.com/)}
 2. Find the "**Apps**" section on the left side of the Portal page
     * Click on the [ **+** ] button on the left side
-    * ![](https://get.kintone.help/k/img-en/tutorial_img19.png)
+    * ![](https://dev-to-uploads.s3.amazonaws.com/i/lu0uvfbhxw22wh97ay7f.png)
 3. Select the "**Create App from Scratch**" button from the Kintone Marketplace page
     * ![](https://get.kintone.help/k/img-en/tutorial_01.png)
 4. Name the Database by clicking on & replacing `New App` with `Obniz Counter`
-    * ![](https://get.kintone.help/k/img-en/tutorial_02.png)
+    * ![Step 4](https://dev-to-uploads.s3.amazonaws.com/i/0zmixcjchl1cu1kf0pdv.gif)
 5. Drag-&-Drop a **Number** field, click on the left gear ⚙️ icon & name it `Count`
 6. Drag-&-Drop the **Created datetime** field
 7. Click the green **Save Form** button
+    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/shumjv4mcrt1hznp11cv.gif)
 8. Click the **App Settings** tab, then click on the **JavaScript and CSS Customization** section
 9.  Under the **Upload JavaScript for PC** section, click on the **Add Link** button & past-in `https://unpkg.com/obniz@2.0.3/obniz.js`
     * This is the CDN URL to the Obniz's JavaScript library
 10. Still under the **Upload JavaScript for PC** section, click on the **Add File** and upload the `Script.js` file from the [Configure the Script.js](#configure-the-scriptjs) section
 11. Click the blue **Save** button at the top
 12. Finally, click on the blue **Activate App** button
+    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/1gd7emuvq5f879bqbfic.gif)
 
-Your Kintone Database is now already!  
+
+Your Kintone Database is now ready!  
 You can access it from the **Portal** Page under the **Apps** section.
+
+## Verify
+
+Time to test your new counter!
+
+1. Open your browser to Kintone Database App's Record List View.  
+    * ⚠️ Enter your obnizID a prompt requesting it appears. To prevent this prompt from appearing in the future, configure the `Script.js` with your obnizID.
+2. Verify if Obniz Board is connected by seeing it display a `PIN ASSIGN` screen like below.
+    * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/o60omk79zul4em69wyc3.png)
+3. Now move the **Dial Switch** (Black Wheel Nob, Top Left) to the **Right** and click **Click** it
+4. A new record in the `Obniz Counter` Database App should appear with `1` as the count.
+
+| Record List Page | Record Details Page |
+| ---------------- | ------------------- |
+| ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/3eo3zmqltdce5jlh5avo.png) | ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/qbiojy43ob26je003jcl.png) |
 
 ## Conclusion
 
@@ -191,4 +211,4 @@ If you have any questions or problems with **Obniz Board**, tweet at them at [@o
 ### References for Kintone
 - [Kintone Developer Docs & Tutorials](http://developer.kintone.io/)
 - [Add Record POST REST API](https://developer.kintone.io/hc/en-us/articles/212494628)
-- [Creating an Kintone App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html)
+- [Creating a Kintone App from Scratch](https://get.kintone.help/k/en/user/create_app/tutorial.html)
