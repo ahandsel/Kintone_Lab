@@ -140,8 +140,10 @@ Save the code as `Script.js` and replace the Xs in Line 5 with your obnizID.
 * ⚠️ No Special Characters
 * ⚡ Only use lowercase, numbers, & hyphens in the Subdomain
 
-#### 📺️ Quick Video on the Sign-Up Process:  
-* [youtu.be/Gzz8SbTuoFg](https://youtu.be/Gzz8SbTuoFg)
+#### 📺️ Quick Video on the Sign-Up Process:
+{% youtube Gzz8SbTuoFg %}
+
+<!-- https://youtu.be/Gzz8SbTuoFg -->
 
 ## Create the Database
 Databases in Kintone are called "Apps".
