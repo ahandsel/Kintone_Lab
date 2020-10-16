@@ -54,8 +54,8 @@ The network name will be `obniz-XXXXXXXXXX`
 
 ### Step 6: Press "**Connect**" button to complete the process.
 
-| Login Page                                                                                | Success Page                                                                                    |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Login Page | Success Page |
+| ---------- | ------------ |
 | ![](https://obniz.com/doc/reference/obnizos-for-esp32/settings/images/wifi_configure.png) | ![](https://obniz.com/doc/reference/obnizos-for-esp32/settings/images/wifi_configure_after.png) |
 
 ### Success + obnizID
@@ -128,7 +128,9 @@ Save the code as `Script.js` and replace the Xs in Line 5 with your obnizID.
 })();
 ```
 
-**Credit**: The above code is in large part by written by [@RyBB](https://github.com/RyBB). Check out his Japanese articles at [Qitta @RyBB](https://qiita.com/RyBB).
+#### Code's Author
+The above code is in large part by written by **[@RyBB](https://github.com/RyBB)**.
+RyBB is a Technical Evangelist at Cybozu where he promotes fun hacks using the Kintone Platform. Check out his Japanese articles at [Qitta @RyBB](https://qiita.com/RyBB).
 
 ## Get a FREE Kintone Developer License
 
@@ -176,7 +178,6 @@ The steps it takes are also written below.
 12. Finally, click on the blue **Activate App** button
     * ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/1gd7emuvq5f879bqbfic.gif)
 
-
 Your Kintone Database is now ready!  
 You can access it from the **Portal** Page under the **Apps** section.
 
@@ -191,8 +192,8 @@ Time to test your new counter!
 3. Now move the **Dial Switch** (Black Wheel Nob, Top Left) to the **Right** and click **Click** it
 4. A new record in the `Obniz Counter` Database App should appear with `1` as the count.
 
-| Record List Page                                                                | Record Details Page                                                             |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Record List Page | Record Details Page |
+| ---------------- | ------------------- |
 | ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/3eo3zmqltdce5jlh5avo.png) | ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/qbiojy43ob26je003jcl.png) |
 
 ### 📺️ Demo Video
