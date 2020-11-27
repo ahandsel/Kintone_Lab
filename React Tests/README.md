@@ -1,4 +1,4 @@
-# React x Kintone Workshop Brainstrom
+# React x Kintone Workshop Brainstorm
 
 ## React CDN
 
