@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAAGElEQVQIW2P4DwcMDAxAfBvMAhEQMYgcACEHG8ELxtbPAAAAAElFTkSuQmCC"
+    rel="icon" type="image/x-icon" />
+
+  <!-- React -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Babel for JSX for browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      state = {
+        name: 'Panda',
+        age: 30
+      }
+      handleClick(e){
+        // console.log(e.target);
+        console.log(this.state);
+      }
+      handleMouseOver(e){
+        console.log(e.target, e.pageX);
+      }
+      handleCopy(e){
+        console.log('Hello, do you hate me?');
+      }
+      render() {
+        return (
+          // JSX here
+          <div className="app-content">
+            <h1>Hey, ninjas</h1>
+            <p>I am a {this.state.name} and {this.state.age} years old.</p>
+            <button onClick={this.handleClick}>Click Me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+            <p onCopy={this.handleCopy}>What we think, we become</p>
+          </div>
+        )
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+  </script>
+
+</body>
+
+</html>
