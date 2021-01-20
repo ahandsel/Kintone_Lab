@@ -3,3 +3,6 @@
 data formatting
 - append `'color': colorSet.getIndex(15)` & increment the index
 - What to do about `'icon': ''` ???
+
+Let's display the attached file registered in the record in the customized view
+https://developer.cybozu.io/hc/ja/articles/203126440z
