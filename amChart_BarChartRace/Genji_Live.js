@@ -1,3 +1,4 @@
+// Bar Chart
 (function () {
   'use strict';
 
