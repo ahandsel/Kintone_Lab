@@ -1,13 +1,4 @@
-// TimeLine x Kintone Test by Genji
-// https://drive.google.com/uc?export=view&id=1lapS2hg7VTOGrpIkZDRilEMnQVCjwgaK
-
-/* Required CDNs
-https://cdn.amcharts.com/lib/4/core.js
-https://cdn.amcharts.com/lib/4/charts.js
-https://cdn.amcharts.com/lib/4/plugins/timeline.js
-https://cdn.amcharts.com/lib/4/plugins/bullets.js
-https://cdn.amcharts.com/lib/4/themes/animated.js
-*/
+// amChart TimeLine x Kintone
 
 (function () {
   'use strict';
@@ -40,11 +31,12 @@ https://cdn.amcharts.com/lib/4/themes/animated.js
     chart.autoMargins = true;
     chart.paddingTop = '1px';
     chart.paddingTop = '70px';
-    // chart.curveContainer.padding(20, 20, 20, 20);
     chart.levelCount = 5;
     chart.maskBullets = false; // Allow bullets to "bleed" over the edge
     chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd';
     chart.dateFormatter.dateFormat = 'yyyy-MM-dd';
+    chart.fontSize = 12;
+    chart.tooltipContainer.fontSize = 12;
     chart.data = event.records.map((records, index) => {
       return {
         'text': `${records.First.value}\n${records.Last.value}`,
@@ -59,8 +51,6 @@ https://cdn.amcharts.com/lib/4/themes/animated.js
 
     console.log('chart.data');
     console.log(chart.data);
-    chart.fontSize = 12;
-    chart.tooltipContainer.fontSize = 12;
 
     const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = 'category';
@@ -86,7 +76,7 @@ https://cdn.amcharts.com/lib/4/themes/animated.js
     // Timeline axis' label
     const labelTemplate = dateAxis.renderer.labels.template;
     labelTemplate.verticalCenter = 'middle';
-    labelTemplate.fillOpacity = 0.4;
+    labelTemplate.fillOpacity = 1;
     labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor('background');
     labelTemplate.background.fillOpacity = 1;
     labelTemplate.padding(7, 7, 7, 7);
