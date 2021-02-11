@@ -1,5 +1,7 @@
 # Notes on amChart's Timeline x Kintone
 
+[Plugin: Bullets – amCharts 4 Documentation](https://www.amcharts.com/docs/v4/tutorials/plugin-bullets/)
+
 data formatting
 - append `'color': colorSet.getIndex(15)` & increment the index
 - What to do about `'icon': ''` ???
