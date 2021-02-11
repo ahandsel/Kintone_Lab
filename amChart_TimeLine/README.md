@@ -1,17 +1,18 @@
 # Notes on amChart's Timeline x Kintone
 
-[Plugin: Bullets – amCharts 4 Documentation](https://www.amcharts.com/docs/v4/tutorials/plugin-bullets/)
+## Required CDNs
 
-data formatting
-- append `'color': colorSet.getIndex(15)` & increment the index
-- What to do about `'icon': ''` ???
+```text
+https://cdn.amcharts.com/lib/4/core.js
+https://cdn.amcharts.com/lib/4/charts.js
+https://cdn.amcharts.com/lib/4/plugins/timeline.js
+https://cdn.amcharts.com/lib/4/plugins/bullets.js
+https://cdn.amcharts.com/lib/4/themes/animated.js
+```
 
-Let's display the attached file registered in the record in the customized view
-<https://developer.cybozu.io/hc/ja/articles/203126440z>
+## amCharts 4 Documentations
+  - [Timeline - amCharts](https://www.amcharts.com/demos/timeline/)
+  - [Plugin: Bullets](https://www.amcharts.com/docs/v4/tutorials/plugin-bullets/)
+  - [Anatomy of a TimeLine Chart](https://www.amcharts.com/docs/v4/chart-types/timeline/)
 
-Two required steps for file download
-<https://developer.cybozu.io/hc/ja/articles/200814380>
-
-## amCharts Timeline
-- [Demo](https://www.amcharts.com/demos/timeline/)
-- [Anatomy of a TimeLine Chart – amCharts 4 Documentation](https://www.amcharts.com/docs/v4/chart-types/timeline/)
+<!-- https://drive.google.com/uc?export=view&id=1lapS2hg7VTOGrpIkZDRilEMnQVCjwgaK -->
