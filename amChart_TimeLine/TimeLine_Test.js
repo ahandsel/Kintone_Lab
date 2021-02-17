@@ -13,12 +13,34 @@
     'Whig': '#ebbd50'
   };
 
-  // Imgur's Image Hash
-  const imgCode = ['', 'gk1cP2u', '9FR7eva', 'aumfl2F', 'kx8BdCT', 'z6Yd9Lm', '4HLWKcB', 'mmTyKJ1', 'PCb7ly6', 'UgN4EA7', 'rVoiW4X', 'i3euA9w', 'kt92UVi', 'oo5aw5x', 'BZI7FTa', 'XLkIWAs', 'qB4GVSv', '5kAZ3NJ', 'drQysn9', 'UqvMVTH', 'Wte60Q6', '3DAK1C1', 'h6b7Vw5', 'ctHNmhA', '18zBca0', 'hb94eO2', '12hJdg0', 'Bl8oRVY', 'HQ1xV6H', 'pj4oAjR', 'QuzzGmm', 'zpE50Pa', '4zSuesA', 'mevGXAh', '5zq1fDg', 'EcUoEs2', 'S5BJfEO', 'bMW0Ltr', 'hutxiiz', 'hRBgyF1', 'gHP21eA', '3QtuHuW', 'XSwwVLh', 'wnbeSN1', 'Uw18RFA', '4APgxYd', 'S5wCZcd'];
+  function getPhotoLink(URL) {
+    // const URL = 'https://en.wikipedia.org/wiki/Presidency_of_Thomas_Jefferson';
+    let wikiTitle = (URL).replace('https\:\/\/en\.wikipedia\.org\/wiki\/', '')
+    let wikiQuery = `https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&titles=${wikiTitle}&pithumbsize=100&format=json`;
+
+    return new kintone.Promise(
+      function (resolve, reject) {
+        kintone.proxy(wikiQuery, 'GET', {}, {},
+          function (resp) {
+            let respJSON = JSON.parse(resp).query.pages;
+
+            let pageid = Object.keys(respJSON)[0];
+            var imgURL = respJSON[pageid].thumbnail.source;
+            console.log(`URL: ${URL}`);
+            console.log(`imgURL: ${imgURL}`);
+            resolve(imgURL);
+          },
+          function (err) {
+            console.log(err);
+            reject(err);
+          }
+        );
+      }
+    );
+  }
 
   // Kintone event triggered after the record list page is displayed.
   kintone.events.on('app.record.index.show', function (event) {
-
     // Retrieve & configure the space element below the record list's header
     const spaceDiv = kintone.app.getHeaderSpaceElement();
     spaceDiv.style.height = '650px';
@@ -42,15 +64,21 @@
     chart.fontSize = 12;
     chart.tooltipContainer.fontSize = 12;
     chart.data = event.records.map((records, index) => {
-      return {
-        'text': `${records.First.value}\n${records.Last.value}`,
-        'color': partyColor[records.Party.value],
-        'start': records.start.value,
-        'end': records.end.value,
-        'textDisabled': false,
-        'icon': `https://i.imgur.com/${imgCode[records.Number.value]}.png`,
-        'category': ''
-      }
+      getPhotoLink(records.Link.value).then(
+        function (resp) {
+          console.log(resp);
+          return {
+            'text': `${records.Text.value}\n${records.Text_0.value}`,
+            'color': partyColor[records.Drop_down.value],
+            'start': records.Date.value,
+            'end': records.Date_0.value,
+            'textDisabled': false,
+            // 'icon': a,
+            // 'icon': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/John_Vanderlyn_-_James_Madison_-_Google_Art_Project.jpg/85px-John_Vanderlyn_-_James_Madison_-_Google_Art_Project.jpg',
+            'category': ''
+          }
+        }
+      );
     });
 
     console.log('chart.data');
