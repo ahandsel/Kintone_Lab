@@ -15,8 +15,6 @@ https://cdn.amcharts.com/lib/4/themes/animated.js
   - [Plugin: Bullets](https://www.amcharts.com/docs/v4/tutorials/plugin-bullets/)
   - [Anatomy of a TimeLine Chart](https://www.amcharts.com/docs/v4/chart-types/timeline/)
 
-<!-- https://drive.google.com/uc?export=view&id=1lapS2hg7VTOGrpIkZDRilEMnQVCjwgaK -->
-
 ## Field Codes
 
 | Field Name    | Default Field Code | Test.js |
@@ -28,3 +26,6 @@ https://cdn.amcharts.com/lib/4/themes/animated.js
 | Party         | Drop_down          | Party   |
 | Wiki_URL      | Link               | Link    |
 | Record_number | Record_number      | Number  |
+
+<!-- CDN Links -->
+<!-- Test.js: https://drive.google.com/uc?export=view&id=1lapS2hg7VTOGrpIkZDRilEMnQVCjwgaK -->
