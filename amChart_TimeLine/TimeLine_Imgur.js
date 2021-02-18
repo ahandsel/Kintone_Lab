@@ -37,12 +37,10 @@
     // Create chart instance
     const chart = am4core.create(spaceDiv, am4plugins_timeline.SerpentineChart);
     // Space between the chart & border
-    chart.autoMargins = true;
-    chart.paddingTop = '1px';
-    chart.paddingTop = '70px';
+    chart.paddingTop = 100;
     // Number of straight lines of serpentine shape
     chart.levelCount = 5;
-    // Allow bullets to "bleed" over the edge
+    // Allow bullets to 'bleed' over the edge
     chart.maskBullets = false;
     // Input & Output Date format
     chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd';
@@ -81,14 +79,8 @@
     // Gray, dashed lines for date axis
     dateAxis.renderer.line.strokeDasharray = '1,4';
     dateAxis.renderer.line.strokeOpacity = 1;
-
-    // Timeline axis' label
-    const labelTemplate = dateAxis.renderer.labels.template;
-    labelTemplate.verticalCenter = 'middle';
-    labelTemplate.fillOpacity = 1;
-    labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor('background');
-    labelTemplate.background.fillOpacity = 1;
-    labelTemplate.padding(7, 7, 7, 7);
+    // Place the label in the middle of the axis
+    dateAxis.renderer.labels.template.verticalCenter = 'middle';
 
     // Series containing the US Presidents and their terms
     const series = chart.series.push(new am4plugins_timeline.CurveColumnSeries());
@@ -127,9 +119,23 @@
     // Year appearing when hovering over the chart axis
     const cursor = new am4plugins_timeline.CurveCursor();
     chart.cursor = cursor;
-    dateAxis.tooltipDateFormat = "yyyy-MMM";
+    dateAxis.tooltipDateFormat = 'yyyy-MMM';
     cursor.xAxis = dateAxis;
     cursor.lineY.disabled = true; // Disable Y line highlight
 
+    // Optional - Enable export
+    chart.exporting.menu = new am4core.ExportMenu();
+    // Remove unneeded Scrollbar & tooltip
+    chart.scrollbarX.exportable = false;
+    dateAxis.tooltip.exportable = false;
+    // chart.exporting.menu.items = [{
+    //   'label': '...',
+    //   'menu': [
+    //     { 'type': 'png', 'label': 'PNG' },
+    //   ]
+    // }];
+    // var options = chart.exporting.getFormatOptions('png');
+    // options.scale = 5;
+    // chart.exporting.setFormatOptions('png', options);
   });
 })();
