@@ -1,9 +1,11 @@
+// https://drive.google.com/uc?export=view&id=151Liot9LQoC0H5Npi1ry-3nn4HSNXodV
+
 (function () {
   "use strict";
 
   var secret = 'UFcQN4KGrl5brNT3'; // Private key for Convert API authentication
   var previewWidth = '500px'; // Preview display size
-  var powerpointField = 'パワーポイント'; // PowerPoint field field code
+  var powerPointField = 'パワーポイント'; // PowerPoint field field code
   var imageTableField = '画像URLテーブル'; // Field code for the image URL table field
   var imageField = '画像URL'; // Field code for the image URL field
   var spaceField = 'space'; // Element ID of the space
@@ -12,41 +14,63 @@
     'app.record.create.submit.success',
     'app.record.edit.submit.success',
   ], function (event) {
-    var powerpointRecordValue = event.record[powerpointField].value[0];
-    console.log('powerpointRecordValue');
-    console.log(powerpointRecordValue);
-    if (!powerpointRecordValue) return;
+    var powerPointRecordValue = event.record[powerPointField].value[0];
+
+    console.log('powerPointRecordValue');
+    console.log(powerPointRecordValue);
+
+    if (!powerPointRecordValue) return event;
     var client = new KintoneRestAPIClient();
     return client.file.downloadFile({
-      fileKey: powerpointRecordValue.fileKey
+      fileKey: powerPointRecordValue.fileKey
     }).then(function (fileData) {
       var convertApi = ConvertApi.auth({
         secret
       });
       var params = convertApi.createParams();
-      params.add('File', new File([fileData], powerpointRecordValue.name));
+      params.add('File', new File([fileData], powerPointRecordValue.name));
+
+      console.log('params');
+      console.log(params);
+
       return convertApi.convert('pptx', 'png', params);
     }).then(function (response) {
-      return client.record.updateRecord({
+
+      console.log('response');
+      console.log(response);
+
+      var body = {
         app: event.appId,
         id: event.recordId,
         record: {
           [imageTableField]: {
-            value: response.dto.Files.map(function (file) {
-              return {
-                value: {
-                  [imageField]: {
-                    value: file.Url
+            value: response.dto.Files.map(
+
+              function (file) {
+
+                var a = {
+                  value: {
+                    [imageField]: {
+                      value: file.Url
+                    }
                   }
-                }
-              };
-            })
+                };
+                console.log('a');
+                console.log(a);
+                return a
+              })
           }
         }
-      });
+      };
+
+      console.log('body');
+      console.log(body);
+
+      return client.record.updateRecord(body);
     });
   });
 
+  // Create the Preview
   kintone.events.on([
     'app.record.detail.show',
   ], function (event) {
@@ -95,12 +119,13 @@
     });
   });
 
-  kintone.events.on([
-    'app.record.detail.show',
-    'app.record.create.show',
-    'app.record.edit.show',
-  ], function (event) {
-    kintone.app.record.setFieldShown(imageTableField, false);
-  });
+  // Hide the Image Table
+  // kintone.events.on([
+  //   'app.record.detail.show',
+  //   'app.record.create.show',
+  //   'app.record.edit.show',
+  // ], function (event) {
+  //   kintone.app.record.setFieldShown(imageTableField, false);
+  // });
 
 })();
