@@ -120,12 +120,12 @@
   });
 
   // Hide the Image Table
-  // kintone.events.on([
-  //   'app.record.detail.show',
-  //   'app.record.create.show',
-  //   'app.record.edit.show',
-  // ], function (event) {
-  //   kintone.app.record.setFieldShown(imageTableField, false);
-  // });
+  kintone.events.on([
+    'app.record.detail.show',
+    'app.record.create.show',
+    'app.record.edit.show',
+  ], function (event) {
+    kintone.app.record.setFieldShown(imageTableField, false);
+  });
 
 })();
