@@ -1,7 +1,7 @@
 // https://drive.google.com/uc?export=view&id=151Liot9LQoC0H5Npi1ry-3nn4HSNXodV
 
 (function () {
-  "use strict";
+  'use strict';
 
   var secret = 'UFcQN4KGrl5brNT3'; // Private key for Convert API authentication
   var previewWidth = '500px'; // Preview display size
@@ -16,10 +16,24 @@
   ], function (event) {
     var powerPointRecordValue = event.record[powerPointField].value[0];
 
+    // Verify if a file is uploaded to the attachment field
+    if (!powerPointRecordValue) {
+      return event;
+    }
+
     console.log('powerPointRecordValue');
     console.log(powerPointRecordValue);
 
-    if (!powerPointRecordValue) return event;
+    Swal.fire({
+      icon: `success`,
+      title: `PowerPoint file is uploaded!\n Now generating the preview...`,
+      text: `Don't reload the page`,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading()
+      }
+    })
+
     var client = new KintoneRestAPIClient();
     return client.file.downloadFile({
       fileKey: powerPointRecordValue.fileKey
@@ -120,12 +134,12 @@
   });
 
   // Hide the Image Table
-  kintone.events.on([
-    'app.record.detail.show',
-    'app.record.create.show',
-    'app.record.edit.show',
-  ], function (event) {
-    kintone.app.record.setFieldShown(imageTableField, false);
-  });
+  // kintone.events.on([
+  //   'app.record.detail.show',
+  //   'app.record.create.show',
+  //   'app.record.edit.show',
+  // ], function (event) {
+  //   kintone.app.record.setFieldShown(imageTableField, false);
+  // });
 
 })();
