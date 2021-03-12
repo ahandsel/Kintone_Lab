@@ -1,7 +1,7 @@
 # パワーポイントファイルをプレビュー
-元の投稿: [パワーポイントファイルをプレビュー](https://developer.cybozu.io/hc/ja/community/posts/900002839683)
-作成者: [江田篤史](https://developer.cybozu.io/hc/ja/profiles/5826575706-%E6%B1%9F%E7%94%B0%E7%AF%A4%E5%8F%B2)
-作成日時: 2020年12月22日 17:28
+  * 元の投稿: [パワーポイントファイルをプレビュー](https://developer.cybozu.io/hc/ja/community/posts/900002839683)
+  * 作成者: [江田篤史](https://developer.cybozu.io/hc/ja/profiles/5826575706)
+  * 作成日時: 2020年12月22日 17:28
 
 レコード詳細画面でパワーポイントファイルをプレビューするサンプルを作成しました.
 
