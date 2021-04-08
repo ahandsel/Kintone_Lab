@@ -1,0 +1,8 @@
+.kintoneplugin-desc::first-letter {
+    text-transform: capitalize;
+}
+
+.kintoneplugin-select-outer {
+    display: block;
+    padding-bottom: 1em;
+}
