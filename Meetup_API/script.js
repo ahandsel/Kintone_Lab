@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 const form = document.querySelector(".top-banner form");
 const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner .msg");
 const list = document.querySelector(".ajax-section .cities");
-const apiKey = "6d1ea6e93fb48980a8a7bc92f2235c6d";
+const apiKey = process.env.MEETUP_API_SCRIPT_APIKEY;
+
 
 form.addEventListener("submit", e => {
   e.preventDefault();
