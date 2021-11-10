@@ -1,0 +1,13 @@
+<div id="root">
+  Search <input type="text" v-model="searchText" placeholder="Search for">
+  <table border="1px">
+    <tr>
+      <th>Customer</th>
+      <th>Phone</th>
+    </tr>
+    <tr v-for="record in filteredRecords">
+      <td>{{record.companyName.value}}</td>
+      <td>{{record.phoneNumber.value}}</td>
+    </tr> 
+  </table>
+</div>
