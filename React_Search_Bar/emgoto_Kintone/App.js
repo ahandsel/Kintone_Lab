@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-// import logo from './logo.svg';
-import './App.css';
-import Search from './search';
-// import Announcer from './announcer';
+useState = require('react');
+BrowserRouter = require('react-router-dom');
+Search = require('./search');
+
+// import { useState } from 'react';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import Search from './search';
 
 const posts = [
     { id: '1', name: 'This first post is about React' },
@@ -30,7 +31,7 @@ const App = () => {
     const filteredPosts = filterPosts(posts, searchQuery);
 
     return (
-        <Router>
+        <BrowserRouter>
             <div className="App">
                 <Search
                     searchQuery={searchQuery}
@@ -42,7 +43,7 @@ const App = () => {
                     ))}
                 </ul>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 };
 

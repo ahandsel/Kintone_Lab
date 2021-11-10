@@ -1,4 +1,5 @@
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+useHistory = require('react-router-dom');
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
     const history = useHistory();
