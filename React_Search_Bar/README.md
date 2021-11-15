@@ -1,10 +1,10 @@
 # React x Kintone - Search Bar
 
-## Working Customizations!
+## Working Customizations
 
 `KintoneCustomization.js` versions were built using [ahandsel/Kintone_Customization_Webpack: React x Kintone Customization Builder & Uploader](https://github.com/ahandsel/Kintone_Customization_Webpack)!
 
-* `asimdahall/index.js`
+  * `asimdahall/index.js`
 
 ## Nov 15 - Note Reflection
 
@@ -20,8 +20,8 @@ The Custom view does not support <script> tags. If <script> tags were included i
   * [Custom views with pagination and filtering – Kintone Developer Program](https://developer.kintone.io/hc/en-us/articles/115002487174)
   * [Display record data in a custom view – Kintone Developer Program](https://developer.kintone.io/hc/en-us/articles/900000010623)
 
-### Finally got a Webpack x React setup for Kintone!
-* <https://github.com/ahandsel/Kintone_Customization_Webpack>
+### Finally got a Webpack x React setup for Kintone
+  * <https://github.com/ahandsel/Kintone_Customization_Webpack>
 
 ---
 
