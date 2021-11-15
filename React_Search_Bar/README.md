@@ -1,5 +1,11 @@
 # React x Kintone - Search Bar
 
+## Working Customizations!
+
+`KintoneCustomization.js` versions were built using [ahandsel/Kintone_Customization_Webpack: React x Kintone Customization Builder & Uploader](https://github.com/ahandsel/Kintone_Customization_Webpack)!
+
+* `asimdahall/index.js`
+
 ## Nov 15 - Note Reflection
 
 ```text
