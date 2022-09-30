@@ -11,3 +11,4 @@
 * Things to improve on:
   * Converting a checkbox to a switch
   * Move text to in front of the checkbox
+  * Reverse the check status

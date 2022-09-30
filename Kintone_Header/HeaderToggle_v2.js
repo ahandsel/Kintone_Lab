@@ -1,4 +1,4 @@
-// Add a button to show & hide the Kintone header
+// Add a checkbox to show & hide the Kintone header
 (function () {
   'use strict';
   // Run a function when the record list page appears
