@@ -1,0 +1,25 @@
+label .input:checked + .toggle-wrapper > .selector {
+  left: calc(100% - 50px);
+  background-color: #ee5f39;
+}
+/* label .toggle-wrapper { */
+  /* position: relative; */
+  /* width: 120px; */
+  /* height: 60px; */
+  /* background-color: #eaeaea;*/
+  /* border-radius: 999px; */
+  /* margin: auto; */
+  /* cursor: pointer; */
+  /* pointer-events: all; */
+/* } */
+label .toggle-wrapper .selector {
+  /* width: 40px; */
+  /* height: 40px; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 10px; */
+  /* transform: translateY(-50%);
+  background-color: #3957ee;
+  transition: left 0.25s ease;
+  border-radius: 50%; */
+}
